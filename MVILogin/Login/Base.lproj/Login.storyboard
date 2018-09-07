@@ -18,7 +18,16 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="g2h-P3-Ig6">
+                                <rect key="frame" x="157.5" y="248" width="60" height="60"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" name="pineapple"/>
+                        <constraints>
+                            <constraint firstItem="g2h-P3-Ig6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="228" id="3qC-eB-fn4"/>
+                            <constraint firstItem="g2h-P3-Ig6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KWN-E6-61S"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -27,6 +36,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image" width="60" height="60"/>
         <namedColor name="pineapple">
             <color red="0.34509803921568627" green="0.20784313725490197" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

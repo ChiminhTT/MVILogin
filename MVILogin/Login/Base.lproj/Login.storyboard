@@ -14,7 +14,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="MVILogin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login_vc" id="BYZ-38-t0r" customClass="LoginViewController" customModule="MVILogin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,9 +26,9 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="faE-Mg-FGb">
-                                <rect key="frame" x="24" y="315" width="327" height="22"/>
+                                <rect key="frame" x="24" y="309" width="327" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="RPI-hm-S6i"/>
+                                    <constraint firstAttribute="height" constant="33" id="RPI-hm-S6i"/>
                                 </constraints>
                                 <color key="textColor" name="disabled_white"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -39,20 +39,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fl0-M9-hDo" customClass="LoginButton" customModule="MVILogin" customModuleProvider="target">
-                                <rect key="frame" x="24" y="382" width="327" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="xje-t0-QaM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Log in">
-                                    <color key="titleColor" name="space_cadet"/>
-                                </state>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYw-jG-SE3">
-                                <rect key="frame" x="24" y="243" width="327" height="22"/>
+                                <rect key="frame" x="24" y="241" width="327" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="9vX-qq-Pvn"/>
+                                    <constraint firstAttribute="height" constant="33" id="9vX-qq-Pvn"/>
                                 </constraints>
                                 <color key="textColor" name="disabled_white"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -63,6 +53,18 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fl0-M9-hDo" customClass="LoginButton" customModule="MVILogin" customModuleProvider="target">
+                                <rect key="frame" x="24" y="382" width="327" height="45"/>
+                                <color key="backgroundColor" name="disabled_white"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="xje-t0-QaM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" name="pineapple"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" name="pineapple"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="pineapple"/>
                         <constraints>
@@ -72,9 +74,9 @@
                             <constraint firstItem="fl0-M9-hDo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="VDG-3f-tOa"/>
                             <constraint firstItem="g2h-P3-Ig6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="Vr2-pF-mRC"/>
                             <constraint firstItem="faE-Mg-FGb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="XAi-d3-2ym"/>
-                            <constraint firstItem="fl0-M9-hDo" firstAttribute="top" secondItem="faE-Mg-FGb" secondAttribute="bottom" constant="45" id="YH9-XO-EME"/>
+                            <constraint firstItem="fl0-M9-hDo" firstAttribute="top" secondItem="faE-Mg-FGb" secondAttribute="bottom" constant="40" id="YH9-XO-EME"/>
                             <constraint firstItem="bYw-jG-SE3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="ef0-3d-jaf"/>
-                            <constraint firstItem="faE-Mg-FGb" firstAttribute="top" secondItem="bYw-jG-SE3" secondAttribute="bottom" constant="50" id="m7c-Ds-LH3"/>
+                            <constraint firstItem="faE-Mg-FGb" firstAttribute="top" secondItem="bYw-jG-SE3" secondAttribute="bottom" constant="35" id="m7c-Ds-LH3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="faE-Mg-FGb" secondAttribute="trailing" constant="24" id="t1e-CH-nyf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fl0-M9-hDo" secondAttribute="bottom" constant="240" id="tTZ-dT-jlM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bYw-jG-SE3" secondAttribute="trailing" constant="24" id="xsf-DZ-Exf"/>
@@ -106,11 +108,14 @@
         <namedColor name="disabled_white">
             <color red="1" green="1" blue="1" alpha="0.55000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="disabled_white">
+            <color red="1" green="1" blue="1" alpha="0.55000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="pineapple">
             <color red="0.34509803921568627" green="0.20784313725490197" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="space_cadet">
-            <color red="0.090196078431372548" green="0.21568627450980393" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="pineapple">
+            <color red="0.34509803921568627" green="0.20784313725490197" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

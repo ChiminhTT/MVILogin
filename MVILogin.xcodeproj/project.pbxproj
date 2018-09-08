@@ -13,6 +13,7 @@
 		8707BB4D2143FAC5008D2226 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8707BB4C2143FAC5008D2226 /* LoginButton.swift */; };
 		871D46502144760B00786613 /* LoginViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D464F2144760B00786613 /* LoginViewController+Helper.swift */; };
 		871D46522144780D00786613 /* LoginViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D46512144780D00786613 /* LoginViewReactor.swift */; };
+		871D465421447D3300786613 /* UIVIewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D465321447D3300786613 /* UIVIewController+Rx.swift */; };
 		8721E7FA2144105C00B1F58B /* KeyboardHeightObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8721E7F92144105C00B1F58B /* KeyboardHeightObservable.swift */; };
 		8781779121433172002655E4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781778B21433170002655E4 /* View.swift */; };
 		8781779221433172002655E4 /* StoryboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781778C21433170002655E4 /* StoryboardView.swift */; };
@@ -72,6 +73,7 @@
 		8707BB4C2143FAC5008D2226 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		871D464F2144760B00786613 /* LoginViewController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+Helper.swift"; sourceTree = "<group>"; };
 		871D46512144780D00786613 /* LoginViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewReactor.swift; sourceTree = "<group>"; };
+		871D465321447D3300786613 /* UIVIewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+Rx.swift"; sourceTree = "<group>"; };
 		8721E7F92144105C00B1F58B /* KeyboardHeightObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHeightObservable.swift; sourceTree = "<group>"; };
 		8781778B21433170002655E4 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		8781778C21433170002655E4 /* StoryboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				8707BB46214360D4008D2226 /* CALayer+extensions.swift */,
 				8707BB4A21436D3C008D2226 /* UITextField+extensions.swift */,
 				8721E7F92144105C00B1F58B /* KeyboardHeightObservable.swift */,
+				871D465321447D3300786613 /* UIVIewController+Rx.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -146,8 +149,8 @@
 			children = (
 				87E9DF4A214323EB008572B0 /* Login.storyboard */,
 				87E9DF48214323EB008572B0 /* LoginViewController.swift */,
-				871D464F2144760B00786613 /* LoginViewController+Helper.swift */,
 				871D46512144780D00786613 /* LoginViewReactor.swift */,
+				871D464F2144760B00786613 /* LoginViewController+Helper.swift */,
 				8707BB4E2143FAC9008D2226 /* Views */,
 			);
 			path = Login;
@@ -391,6 +394,7 @@
 				8781779321433172002655E4 /* Stub.swift in Sources */,
 				8781779621433172002655E4 /* AssociatedObjectStore.swift in Sources */,
 				871D46522144780D00786613 /* LoginViewReactor.swift in Sources */,
+				871D465421447D3300786613 /* UIVIewController+Rx.swift in Sources */,
 				8707BB47214360D4008D2226 /* CALayer+extensions.swift in Sources */,
 				8781779521433172002655E4 /* Reactor.swift in Sources */,
 				87E9DF47214323EB008572B0 /* AppDelegate.swift in Sources */,

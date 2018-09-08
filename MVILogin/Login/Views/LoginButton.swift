@@ -34,7 +34,6 @@ extension LoginButton
 {
   override func awakeFromNib()
   {
-    bind()
     layer.cornerRadius = 5
     setTitleColor(#colorLiteral(red: 0.3450980392, green: 0.2078431373, blue: 0.368627451, alpha: 1), for: .disabled)
   }
@@ -42,14 +41,25 @@ extension LoginButton
 
 extension LoginButton
 {
-  private func bind()
+  override var isEnabled: Bool
   {
-    btn_state
-      .asObservable()
-      .subscribe({ event in
-        guard let isEnabled = event.element else { return }
-        isEnabled ? (self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.55)) : (self.backgroundColor = .white)
+    didSet
+    {
+      let background_color = isEnabled ? .white : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.55)
+      UIView.animate(withDuration: 0.2, animations: {
+        self.backgroundColor = background_color
       })
-      .disposed(by: disposeBag)
+    }
+  }
+  
+  override var isHighlighted: Bool
+  {
+    didSet
+    {
+      let background_color = isHighlighted ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.75) : .white
+      UIView.animate(withDuration: 0.2, animations: {
+        self.backgroundColor = background_color
+      })
+    }
   }
 }

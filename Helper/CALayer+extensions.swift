@@ -21,7 +21,7 @@ extension CALayer
     case UIRectEdge.top:
       border.frame = CGRect(
         x: 0,
-        y: -14,
+        y: -1,
         width: width,
         height: thickness
       )
@@ -29,7 +29,7 @@ extension CALayer
     case UIRectEdge.bottom:
       border.frame = CGRect(
         x: 0,
-        y: self.bounds.height - thickness + 14,
+        y: self.bounds.height - thickness + 1,
         width: width,
         height: thickness
       )

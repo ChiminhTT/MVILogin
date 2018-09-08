@@ -13,7 +13,8 @@ import RxCocoa
 
 typealias KeyboardHeightInfo = (CGFloat, TimeInterval)
 
-func keyboardHeight() -> Driver<KeyboardHeightInfo> {
+func keyboardHeight() -> Driver<KeyboardHeightInfo>
+{
   return Observable
     .from([
       NotificationCenter.default.rx.notification(NSNotification.Name.UIKeyboardWillShow)

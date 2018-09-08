@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class LoginViewController: UIViewController
+final class LoginViewController: UIViewController, View
 {
   // MARK: - IBOutlets
   @IBOutlet weak var icon_imageview: UIImageView!
@@ -23,28 +23,68 @@ class LoginViewController: UIViewController
   @IBOutlet weak var button_side_constraint: NSLayoutConstraint!
   
   // MARK: - Instance parameter
-  let disposeBag = DisposeBag()
+  var disposeBag = DisposeBag()
 }
 
 extension LoginViewController
 {
-  override func viewDidLoad()
+  func bind(reactor: LoginViewReactor)
   {
-    load_layout(corresponding: .launch, animated: false)
-    keyboardHeight()
-      .drive(onNext: { [unowned self] (value, animation_duration) in
-        print(value)
-        DispatchQueue.main.async {
-          self.load_layout(corresponding: .typing(keyboard_height: value), animated: true)
+    /// View to reactor
+    self.rx
+      .viewDidAppear
+      .map { _ in Reactor.Action.display_ui_state(.landing) }
+      .bind(to: reactor.action)
+      .disposed(by: disposeBag)
+    
+    keyboardHeight().asObservable()
+      .map {(value, _) in
+        Reactor.Action.display_ui_state(.typing(keyboard_height: value))
+      }
+      .bind(to: reactor.action)
+      .disposed(by: disposeBag)
+    
+    email_textfield.rx
+      .text
+      .throttle(0.2, scheduler: MainScheduler.instance)
+      .map { Reactor.Action.update_email($0) }
+      .bind(to: reactor.action)
+      .disposed(by: disposeBag)
+    
+    password_textfield.rx
+      .text
+      .throttle(0.2, scheduler: MainScheduler.instance)
+      .map { Reactor.Action.update_password($0) }
+      .bind(to: reactor.action)
+      .disposed(by: disposeBag)
+    
+    /// Reactor to view
+    reactor.state
+      .map { $0.ui_state }
+      .subscribe(onNext: { ui_state in
+        switch ui_state
+        {
+        case .launch:
+          self.load_layout(corresponding: ui_state, animated: false)
+        default:
+          self.load_layout(corresponding: ui_state, animated: true)
         }
+        
       })
       .disposed(by: disposeBag)
+    
+    reactor.state
+      .map { $0.info_validity }
+      .bind(to: login_button.rx.isEnabled)
+      .disposed(by: disposeBag)
   }
-  
+}
+
+extension LoginViewController
+{
   override func viewDidAppear(_ animated: Bool)
   {
     setup_textfields()
-    load_layout(corresponding: .landing, animated: true)
   }
 }
 

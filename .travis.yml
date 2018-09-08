@@ -1,8 +1,8 @@
 language: objective-c
 xcode_project: MVILogin.xcodeproj # path to your xcodeproj folder
 xcode_scheme: MVILoginTests
-xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone 7
+xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone 7
 script:
-    - xcodebuild clean test -project MVILogin.xcodeproj -scheme MVILoginTests -destination "platform=iOS Simulator,name=iPhone 7,OS=11.3" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
+    - xcodebuild clean test -project MVILogin.xcodeproj -scheme MVILoginTests -destination "platform=iOS Simulator,name=iPhone 7,OS=11.4" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
 
 install: carthage update --platform iOS

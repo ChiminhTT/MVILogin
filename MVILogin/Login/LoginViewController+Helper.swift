@@ -13,6 +13,7 @@ enum LoginUIState
   case launch
   case landing
   case typing(keyboard_height: CGFloat)
+  case login_loading
 }
 
 struct LoginUI
@@ -115,6 +116,17 @@ extension LoginViewController
         password_textfield_alpha: 1,
         login_button_alpha: 1,
         button_corner_radius: 0
+      )
+    case .login_loading:
+      return LoginUI(
+        icon_top_constraint: CGFloat(70),
+        icon_to_email_constraint: CGFloat(90),
+        button_bottom_constraint: CGFloat(190),
+        button_side_constraint: CGFloat(24),
+        email_textfield_alpha: 1,
+        password_textfield_alpha: 1,
+        login_button_alpha: 1,
+        button_corner_radius: 5
       )
     }
   }

@@ -15,6 +15,7 @@ final class LoginViewReactor: Reactor
     case display_ui_state(LoginUIState)
     case update_email(String?)
     case update_password(String?)
+    case login(email: String?, password: String?)
   }
   
   enum Mutation
@@ -53,6 +54,11 @@ extension LoginViewReactor
       return Observable.concat([
         Observable.just(.change_password(new_password)),
         Observable.just(.update_info_validity)
+      ])
+    case .login(let email, let password):
+      guard let email = email, let password = password else { return Observable.empty() }
+      return Observable.concat([
+        Observable.just(.change_ui_state(.login_loading))
       ])
     }
   }

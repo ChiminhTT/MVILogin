@@ -14,6 +14,8 @@
 		871D46502144760B00786613 /* LoginViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D464F2144760B00786613 /* LoginViewController+Helper.swift */; };
 		871D46522144780D00786613 /* LoginViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D46512144780D00786613 /* LoginViewReactor.swift */; };
 		871D465421447D3300786613 /* UIVIewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D465321447D3300786613 /* UIVIewController+Rx.swift */; };
+		871D46582145C56200786613 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871D46572145C55600786613 /* NVActivityIndicatorView.framework */; };
+		871D46592145C56200786613 /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 871D46572145C55600786613 /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8721E7FA2144105C00B1F58B /* KeyboardHeightObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8721E7F92144105C00B1F58B /* KeyboardHeightObservable.swift */; };
 		8781779121433172002655E4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781778B21433170002655E4 /* View.swift */; };
 		8781779221433172002655E4 /* StoryboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781778C21433170002655E4 /* StoryboardView.swift */; };
@@ -60,6 +62,7 @@
 			files = (
 				8781779F21433417002655E4 /* RxSwift.framework in Embed Frameworks */,
 				8781779D21433417002655E4 /* RxCocoa.framework in Embed Frameworks */,
+				871D46592145C56200786613 /* NVActivityIndicatorView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +77,7 @@
 		871D464F2144760B00786613 /* LoginViewController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+Helper.swift"; sourceTree = "<group>"; };
 		871D46512144780D00786613 /* LoginViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewReactor.swift; sourceTree = "<group>"; };
 		871D465321447D3300786613 /* UIVIewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+Rx.swift"; sourceTree = "<group>"; };
+		871D46572145C55600786613 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = SOURCE_ROOT; };
 		8721E7F92144105C00B1F58B /* KeyboardHeightObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHeightObservable.swift; sourceTree = "<group>"; };
 		8781778B21433170002655E4 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		8781778C21433170002655E4 /* StoryboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardView.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			files = (
 				8781779E21433417002655E4 /* RxSwift.framework in Frameworks */,
 				8781779A21433408002655E4 /* RxCocoa.framework in Frameworks */,
+				871D46582145C56200786613 /* NVActivityIndicatorView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +177,7 @@
 		87817797214333F9002655E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				871D46572145C55600786613 /* NVActivityIndicatorView.framework */,
 				8781779821433408002655E4 /* RxCocoa.framework */,
 				8781779921433408002655E4 /* RxSwift.framework */,
 			);

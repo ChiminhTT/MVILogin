@@ -9,6 +9,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import NVActivityIndicatorView
 
 final class LoginViewController: UIViewController, View
 {
@@ -22,6 +23,7 @@ final class LoginViewController: UIViewController, View
   @IBOutlet weak var button_bottom_constraint: NSLayoutConstraint!
   @IBOutlet weak var button_side_constraint: NSLayoutConstraint!
   
+  var indicator_view: NVActivityIndicatorView?
   // MARK: - Instance parameter
   var disposeBag = DisposeBag()
 }
@@ -58,6 +60,17 @@ extension LoginViewController
       .bind(to: reactor.action)
       .disposed(by: disposeBag)
     
+    login_button.rx
+      .tap
+      .map
+      {
+        Reactor.Action.login(email: self.email_textfield.text,
+                             password: self.password_textfield.text)
+      }
+      .bind(to: reactor.action)
+      .disposed(by: disposeBag)
+    
+    
     /// Reactor to view
     reactor.state
       .map { $0.ui_state }
@@ -66,6 +79,9 @@ extension LoginViewController
         {
         case .launch:
           self.load_layout(corresponding: ui_state, animated: false)
+          self.setup_textfields()
+        case .login_loading:
+          self.login_button.loading_status = .loading
         default:
           self.load_layout(corresponding: ui_state, animated: true)
         }
@@ -79,12 +95,3 @@ extension LoginViewController
       .disposed(by: disposeBag)
   }
 }
-
-extension LoginViewController
-{
-  override func viewDidAppear(_ animated: Bool)
-  {
-    setup_textfields()
-  }
-}
-

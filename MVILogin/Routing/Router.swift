@@ -16,11 +16,13 @@ enum Storyboard: String
 enum ViewIdentifier: String
 {
   case login_vc = "login_vc"
+  case home_vc = "home_vc"
 }
 
 enum Route
 {
   case login
+  case home
 }
 
 class Router
@@ -36,6 +38,12 @@ class Router
         storyboard.instantiateViewController(
           withIdentifier: ViewIdentifier.login_vc.rawValue
         ) as? LoginViewController
+    case .home:
+      let storyboard = UIStoryboard(name: Storyboard.login.rawValue, bundle: nil)
+      opt_target_vc =
+        storyboard.instantiateViewController(
+          withIdentifier: ViewIdentifier.home_vc.rawValue
+        )
     }
     
     guard

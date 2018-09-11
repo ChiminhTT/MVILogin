@@ -14,6 +14,8 @@ enum LoginUIState
   case landing
   case typing
   case login_loading
+  case login_succeeded
+  case login_failed
 }
 
 struct LoginUI
@@ -101,7 +103,7 @@ extension LoginViewController
         button_corner_radius: 5,
         button_login_status: nil
       )
-    case .landing:
+    case .landing, .login_succeeded, .login_failed:
       return LoginUI(
         icon_top_constraint: CGFloat(70),
         icon_to_email_constraint: CGFloat(90),

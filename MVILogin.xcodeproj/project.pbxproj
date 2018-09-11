@@ -16,6 +16,7 @@
 		871D465421447D3300786613 /* UIVIewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D465321447D3300786613 /* UIVIewController+Rx.swift */; };
 		871D46582145C56200786613 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871D46572145C55600786613 /* NVActivityIndicatorView.framework */; };
 		871D46592145C56200786613 /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 871D46572145C55600786613 /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		871D465C214874A900786613 /* MockedLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D465B214874A900786613 /* MockedLoginService.swift */; };
 		8721E7FA2144105C00B1F58B /* KeyboardHeightObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8721E7F92144105C00B1F58B /* KeyboardHeightObservable.swift */; };
 		8781779121433172002655E4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781778B21433170002655E4 /* View.swift */; };
 		8781779221433172002655E4 /* StoryboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781778C21433170002655E4 /* StoryboardView.swift */; };
@@ -78,6 +79,7 @@
 		871D46512144780D00786613 /* LoginViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewReactor.swift; sourceTree = "<group>"; };
 		871D465321447D3300786613 /* UIVIewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+Rx.swift"; sourceTree = "<group>"; };
 		871D46572145C55600786613 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = SOURCE_ROOT; };
+		871D465B214874A900786613 /* MockedLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedLoginService.swift; sourceTree = "<group>"; };
 		8721E7F92144105C00B1F58B /* KeyboardHeightObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHeightObservable.swift; sourceTree = "<group>"; };
 		8781778B21433170002655E4 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		8781778C21433170002655E4 /* StoryboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		871D465A2148746F00786613 /* MockedService */ = {
+			isa = PBXGroup;
+			children = (
+				871D465B214874A900786613 /* MockedLoginService.swift */,
+			);
+			path = MockedService;
+			sourceTree = "<group>";
+		};
 		8781778921432EF2002655E4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +167,7 @@
 				871D46512144780D00786613 /* LoginViewReactor.swift */,
 				871D464F2144760B00786613 /* LoginViewController+Helper.swift */,
 				8707BB4E2143FAC9008D2226 /* Views */,
+				871D465A2148746F00786613 /* MockedService */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -401,6 +412,7 @@
 				8781779621433172002655E4 /* AssociatedObjectStore.swift in Sources */,
 				871D46522144780D00786613 /* LoginViewReactor.swift in Sources */,
 				871D465421447D3300786613 /* UIVIewController+Rx.swift in Sources */,
+				871D465C214874A900786613 /* MockedLoginService.swift in Sources */,
 				8707BB47214360D4008D2226 /* CALayer+extensions.swift in Sources */,
 				8781779521433172002655E4 /* Reactor.swift in Sources */,
 				87E9DF47214323EB008572B0 /* AppDelegate.swift in Sources */,

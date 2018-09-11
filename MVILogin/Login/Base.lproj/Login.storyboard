@@ -96,17 +96,36 @@
                         <outlet property="icon_top_constraint" destination="Vr2-pF-mRC" id="hS8-QT-yys"/>
                         <outlet property="login_button" destination="fl0-M9-hDo" id="Adu-28-Plp"/>
                         <outlet property="password_textfield" destination="faE-Mg-FGb" id="q6z-PK-try"/>
+                        <segue destination="Sv4-2O-SgX" kind="show" animates="NO" id="Luc-f0-dkd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="32.833583208395808"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="b77-MC-JPF">
+            <objects>
+                <viewController storyboardIdentifier="home_vc" id="Sv4-2O-SgX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wiq-Oe-dGY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="pineapple"/>
+                        <viewLayoutGuide key="safeArea" id="FRm-3i-hnP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c27-ds-rYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1854" y="33"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icon_image" width="60" height="60"/>
         <namedColor name="disabled_white">
             <color red="1" green="1" blue="1" alpha="0.55000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="pineapple">
+            <color red="0.34509803921568627" green="0.20784313725490197" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="pineapple">
             <color red="0.34509803921568627" green="0.20784313725490197" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -36,6 +36,13 @@ extension LoginViewController
     /// View to reactor
     self.rx
       .viewDidAppear
+      .subscribe(onNext: { _ in
+        self.setup_textfields()
+      })
+      .disposed(by: disposeBag)
+    
+    self.rx
+      .viewDidAppear
       .map { _ in Reactor.Action.display_ui_state(.landing) }
       .bind(to: reactor.action)
       .disposed(by: disposeBag)
@@ -81,9 +88,8 @@ extension LoginViewController
         {
         case .launch:
           self.load_layout(corresponding: .launch, animated: false)
-          self.setup_textfields()
-        case .login_loading:
-          self.load_layout(corresponding: .login_loading, animated: true)
+        case .login_succeeded:
+          Router.route(from: self, to: .home)
         default:
           self.load_layout(corresponding: ui_state, animated: true)
         }

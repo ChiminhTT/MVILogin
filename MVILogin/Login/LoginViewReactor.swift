@@ -57,8 +57,19 @@ extension LoginViewReactor
       ])
     case .login(let email, let password):
       guard let email = email, let password = password else { return Observable.empty() }
+      let test =
+        MockedLoginService
+          .login(email: email, password: password)
+          .map({ login_result -> Mutation in
+            switch login_result
+            {
+            case .success: return .change_ui_state(.login_succeeded)
+            case .failed: return .change_ui_state(.login_failed)
+            }
+          })
       return Observable.concat([
-        Observable.just(.change_ui_state(.login_loading))
+        Observable.just(.change_ui_state(.login_loading)),
+        test.asObservable(),
       ])
     }
   }

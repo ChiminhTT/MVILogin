@@ -24,6 +24,7 @@ final class LoginViewController: UIViewController, View
   @IBOutlet weak var button_side_constraint: NSLayoutConstraint!
   
   var indicator_view: NVActivityIndicatorView?
+  var keyboard_height: CGFloat = 0
   // MARK: - Instance parameter
   var disposeBag = DisposeBag()
 }
@@ -41,7 +42,8 @@ extension LoginViewController
     
     keyboardHeight().asObservable()
       .map {(value, _) in
-        Reactor.Action.display_ui_state(.typing(keyboard_height: value))
+        self.keyboard_height = value
+        return Reactor.Action.display_ui_state(.typing)
       }
       .bind(to: reactor.action)
       .disposed(by: disposeBag)
@@ -78,14 +80,13 @@ extension LoginViewController
         switch ui_state
         {
         case .launch:
-          self.load_layout(corresponding: ui_state, animated: false)
+          self.load_layout(corresponding: .launch, animated: false)
           self.setup_textfields()
         case .login_loading:
-          self.login_button.loading_status = .loading
+          self.load_layout(corresponding: .login_loading, animated: true)
         default:
           self.load_layout(corresponding: ui_state, animated: true)
         }
-        
       })
       .disposed(by: disposeBag)
     

@@ -12,7 +12,7 @@ enum LoginUIState
 {
   case launch
   case landing
-  case typing(keyboard_height: CGFloat)
+  case typing
   case login_loading
 }
 
@@ -26,6 +26,7 @@ struct LoginUI
   let password_textfield_alpha: CGFloat
   let login_button_alpha: CGFloat
   let button_corner_radius: CGFloat
+  let button_login_status: LoadingState?
 }
 
 extension LoginViewController
@@ -61,6 +62,10 @@ extension LoginViewController
           self.password_textfield.alpha = login_ui.password_textfield_alpha
           self.login_button.alpha = login_ui.password_textfield_alpha
           self.login_button.layer.cornerRadius = login_ui.button_corner_radius
+          if let loading_status = login_ui.button_login_status
+          {
+            self.login_button.loading_status = loading_status
+          }
       })
     }
     else
@@ -93,7 +98,8 @@ extension LoginViewController
         email_textfield_alpha: 0,
         password_textfield_alpha: 0,
         login_button_alpha: 0,
-        button_corner_radius: 5
+        button_corner_radius: 5,
+        button_login_status: nil
       )
     case .landing:
       return LoginUI(
@@ -104,9 +110,10 @@ extension LoginViewController
         email_textfield_alpha: 1,
         password_textfield_alpha: 1,
         login_button_alpha: 1,
-        button_corner_radius: 5
+        button_corner_radius: 5,
+        button_login_status: nil
       )
-    case .typing(let keyboard_height):
+    case .typing:
       return LoginUI(
         icon_top_constraint: CGFloat(20),
         icon_to_email_constraint: CGFloat(70),
@@ -115,18 +122,20 @@ extension LoginViewController
         email_textfield_alpha: 1,
         password_textfield_alpha: 1,
         login_button_alpha: 1,
-        button_corner_radius: 0
+        button_corner_radius: 0,
+        button_login_status: nil
       )
     case .login_loading:
       return LoginUI(
-        icon_top_constraint: CGFloat(70),
-        icon_to_email_constraint: CGFloat(90),
-        button_bottom_constraint: CGFloat(190),
-        button_side_constraint: CGFloat(24),
+        icon_top_constraint: CGFloat(20),
+        icon_to_email_constraint: CGFloat(70),
+        button_bottom_constraint: CGFloat(keyboard_height),
+        button_side_constraint: CGFloat(0),
         email_textfield_alpha: 1,
         password_textfield_alpha: 1,
         login_button_alpha: 1,
-        button_corner_radius: 5
+        button_corner_radius: 0,
+        button_login_status: .loading
       )
     }
   }

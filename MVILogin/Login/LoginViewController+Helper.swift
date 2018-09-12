@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum LoginUIState
+enum LoginUIState: Equatable
 {
   case launch
   case landing
@@ -17,6 +17,28 @@ enum LoginUIState
   case login_succeeded
   case login_failed
 }
+
+func ==(lhs: LoginUIState, rhs: LoginUIState) -> Bool
+{
+  switch (lhs, rhs)
+  {
+  case (.launch, .launch):
+    return true
+  case (.landing, .landing):
+    return true
+  case (.typing, .typing):
+    return true
+  case (.login_loading, .login_loading):
+    return true
+  case (.login_succeeded, .login_succeeded):
+    return true
+  case (.login_failed, .login_failed):
+    return true
+  default:
+    return false
+  }
+}
+
 
 struct LoginUI
 {

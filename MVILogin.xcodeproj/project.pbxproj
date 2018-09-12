@@ -17,6 +17,26 @@
 		871D46582145C56200786613 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871D46572145C55600786613 /* NVActivityIndicatorView.framework */; };
 		871D46592145C56200786613 /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 871D46572145C55600786613 /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		871D465C214874A900786613 /* MockedLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D465B214874A900786613 /* MockedLoginService.swift */; };
+		871D465F214988A600786613 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D465E214988A600786613 /* LoginViewControllerTests.swift */; };
+		871D46622149899600786613 /* LoginViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D464F2144760B00786613 /* LoginViewController+Helper.swift */; };
+		871D46632149899900786613 /* LoginViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D46512144780D00786613 /* LoginViewReactor.swift */; };
+		871D46642149899C00786613 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E9DF48214323EB008572B0 /* LoginViewController.swift */; };
+		871D4666214989AB00786613 /* ActionSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781778E21433171002655E4 /* ActionSubject.swift */; };
+		871D4667214989AB00786613 /* AssociatedObjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781779021433172002655E4 /* AssociatedObjectStore.swift */; };
+		871D4668214989AB00786613 /* Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781778F21433171002655E4 /* Reactor.swift */; };
+		871D4669214989AB00786613 /* StoryboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781778C21433170002655E4 /* StoryboardView.swift */; };
+		871D466A214989AB00786613 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781778D21433171002655E4 /* Stub.swift */; };
+		871D466B214989AB00786613 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781778B21433170002655E4 /* View.swift */; };
+		871D466C21498A4400786613 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8781779921433408002655E4 /* RxSwift.framework */; };
+		871D466D21498B1200786613 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8707BB4C2143FAC5008D2226 /* LoginButton.swift */; };
+		871D466E21498B2700786613 /* MockedLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D465B214874A900786613 /* MockedLoginService.swift */; };
+		871D466F21498B2A00786613 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878177A521433AF6002655E4 /* Router.swift */; };
+		871D467021498B3000786613 /* CALayer+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8707BB46214360D4008D2226 /* CALayer+extensions.swift */; };
+		871D467121498B3000786613 /* UITextField+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8707BB4A21436D3C008D2226 /* UITextField+extensions.swift */; };
+		871D467221498B3000786613 /* KeyboardHeightObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8721E7F92144105C00B1F58B /* KeyboardHeightObservable.swift */; };
+		871D467321498B3000786613 /* UIVIewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D465321447D3300786613 /* UIVIewController+Rx.swift */; };
+		871D4674214990E600786613 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E9DF4A214323EB008572B0 /* Login.storyboard */; };
+		871D4676214992D600786613 /* LoginViewReactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D4675214992D600786613 /* LoginViewReactorTests.swift */; };
 		8721E7FA2144105C00B1F58B /* KeyboardHeightObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8721E7F92144105C00B1F58B /* KeyboardHeightObservable.swift */; };
 		8781779121433172002655E4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781778B21433170002655E4 /* View.swift */; };
 		8781779221433172002655E4 /* StoryboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781778C21433170002655E4 /* StoryboardView.swift */; };
@@ -33,7 +53,6 @@
 		87E9DF49214323EB008572B0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E9DF48214323EB008572B0 /* LoginViewController.swift */; };
 		87E9DF4C214323EB008572B0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E9DF4A214323EB008572B0 /* Login.storyboard */; };
 		87E9DF4E214323ED008572B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87E9DF4D214323ED008572B0 /* Assets.xcassets */; };
-		87E9DF5C214323ED008572B0 /* MVILoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E9DF5B214323ED008572B0 /* MVILoginTests.swift */; };
 		87E9DF67214323ED008572B0 /* MVILoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E9DF66214323ED008572B0 /* MVILoginUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +99,8 @@
 		871D465321447D3300786613 /* UIVIewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+Rx.swift"; sourceTree = "<group>"; };
 		871D46572145C55600786613 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = SOURCE_ROOT; };
 		871D465B214874A900786613 /* MockedLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedLoginService.swift; sourceTree = "<group>"; };
+		871D465E214988A600786613 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		871D4675214992D600786613 /* LoginViewReactorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewReactorTests.swift; sourceTree = "<group>"; };
 		8721E7F92144105C00B1F58B /* KeyboardHeightObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHeightObservable.swift; sourceTree = "<group>"; };
 		8781778B21433170002655E4 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		8781778C21433170002655E4 /* StoryboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardView.swift; sourceTree = "<group>"; };
@@ -97,7 +118,6 @@
 		87E9DF4D214323ED008572B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87E9DF52214323ED008572B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87E9DF57214323ED008572B0 /* MVILoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVILoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87E9DF5B214323ED008572B0 /* MVILoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVILoginTests.swift; sourceTree = "<group>"; };
 		87E9DF5D214323ED008572B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87E9DF62214323ED008572B0 /* MVILoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVILoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E9DF66214323ED008572B0 /* MVILoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVILoginUITests.swift; sourceTree = "<group>"; };
@@ -119,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				871D466C21498A4400786613 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +178,15 @@
 				871D465B214874A900786613 /* MockedLoginService.swift */,
 			);
 			path = MockedService;
+			sourceTree = "<group>";
+		};
+		871D465D2149884500786613 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				871D465E214988A600786613 /* LoginViewControllerTests.swift */,
+				871D4675214992D600786613 /* LoginViewReactorTests.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		8781778921432EF2002655E4 /* Login */ = {
@@ -240,7 +270,7 @@
 		87E9DF5A214323ED008572B0 /* MVILoginTests */ = {
 			isa = PBXGroup;
 			children = (
-				87E9DF5B214323ED008572B0 /* MVILoginTests.swift */,
+				871D465D2149884500786613 /* Login */,
 				87E9DF5D214323ED008572B0 /* Info.plist */,
 			);
 			path = MVILoginTests;
@@ -345,6 +375,7 @@
 					};
 					87E9DF56214323ED008572B0 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 						TestTargetID = 87E9DF42214323EB008572B0;
 					};
 					87E9DF61214323ED008572B0 = {
@@ -388,6 +419,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				871D4674214990E600786613 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +461,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87E9DF5C214323ED008572B0 /* MVILoginTests.swift in Sources */,
+				871D4668214989AB00786613 /* Reactor.swift in Sources */,
+				871D466D21498B1200786613 /* LoginButton.swift in Sources */,
+				871D466A214989AB00786613 /* Stub.swift in Sources */,
+				871D465F214988A600786613 /* LoginViewControllerTests.swift in Sources */,
+				871D4669214989AB00786613 /* StoryboardView.swift in Sources */,
+				871D4676214992D600786613 /* LoginViewReactorTests.swift in Sources */,
+				871D46632149899900786613 /* LoginViewReactor.swift in Sources */,
+				871D467321498B3000786613 /* UIVIewController+Rx.swift in Sources */,
+				871D46642149899C00786613 /* LoginViewController.swift in Sources */,
+				871D4666214989AB00786613 /* ActionSubject.swift in Sources */,
+				871D467121498B3000786613 /* UITextField+extensions.swift in Sources */,
+				871D467221498B3000786613 /* KeyboardHeightObservable.swift in Sources */,
+				871D46622149899600786613 /* LoginViewController+Helper.swift in Sources */,
+				871D466F21498B2A00786613 /* Router.swift in Sources */,
+				871D466B214989AB00786613 /* View.swift in Sources */,
+				871D466E21498B2700786613 /* MockedLoginService.swift in Sources */,
+				871D467021498B3000786613 /* CALayer+extensions.swift in Sources */,
+				871D4667214989AB00786613 /* AssociatedObjectStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,8 +682,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37L53VP24Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MVILoginTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -643,6 +697,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.maxence-ho.MVILoginTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVILogin.app/MVILogin";
@@ -654,8 +709,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37L53VP24Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MVILoginTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
